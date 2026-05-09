@@ -3,8 +3,18 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from "react";
 import Home from './pages/Home';
 import Lenis from "@studio-freight/lenis";
-
+import Loading from "./components/Loading.jsx";
 function App() {
+
+const [isLoading, setIsLoading] = useState(true);
+
+useEffect(() => {
+  const timer = setTimeout(() => {
+    setIsLoading(false);
+  }, 3500);
+
+  return () => clearTimeout(timer);
+}, []);
 
     const [theme, setTheme] = useState(
     localStorage.getItem("theme") || "dark"
@@ -38,6 +48,10 @@ useEffect(() => {
     lenis.destroy();
   };
 }, []);
+
+  // if (isLoading) {
+  //   return <Loading />;
+  // }
 
   return (
     <BrowserRouter>

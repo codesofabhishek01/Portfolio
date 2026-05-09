@@ -1,0 +1,31 @@
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    letter-spacing: 20px;
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    letter-spacing: 8px;
+  }
+}
+
+.animate-fadeUp {
+  animation: fadeUp 1.5s ease forwards;
+}
+
+@keyframes loader {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-loader {
+  animation: loader 2s ease-in-out infinite;
+}

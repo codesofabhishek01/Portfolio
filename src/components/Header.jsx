@@ -12,7 +12,7 @@ function Header({ theme, setTheme }) {
   return (
    <header
   className='main-header flex justify-between items-center py-8 sticky top-0 px-[50px]'>
-      <span className='text-xl font-bold text-center '> <code>{"<Codes of Abhishek/>"}</code></span>
+      <span className='text-xl font-semibold word-spacing text-center '> <code>{"<Codes of Abhishek/>"}</code></span>
 
      <button
       onClick={toggleTheme}
