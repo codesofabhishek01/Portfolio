@@ -10,10 +10,20 @@ function Header({ theme, setTheme }) {
   };
 
   return (
-   <header
-  className='main-header flex justify-between items-center py-8 sticky top-0 px-[50px]'>
+<header
+  className={`main-header flex justify-between items-center py-[25px] sticky top-[20px] px-[30px] max-w-[800px] mx-auto backdrop-blur-md rounded-[60px] mt-[20px] ${
+    theme === "dark" ? "bg-[#ffffff46]" : "bg-[#0000001f]"
+  }`}
+>
       <span className='text-xl font-semibold word-spacing text-center '> <code>{"<Codes of Abhishek/>"}</code></span>
 
+    
+<ul className="menu flex gap-8">
+  <li>Home </li>
+  <li>About me</li>
+  <li>Work</li>
+  <li>Let's Connect</li>
+</ul>
      <button
       onClick={toggleTheme}
       className="
