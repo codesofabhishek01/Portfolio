@@ -1,12 +1,30 @@
-import React from 'react'
-import '../App.css'
-import abhishek from "../assets/images/abhishek.png"
+import React, { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import abhishek from "../assets/images/abhishek.png";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
+  const sectionRef = useRef(null);
+  const imageRef = useRef(null);
+
+
+
+  useEffect(() => {
+    gsap.fromTo(
+      imageRef.current, { scale: 0.1, }, { scale: 1.5, ease: "none", scrollTrigger: { trigger: sectionRef.current, start: "top bottom",       end: "bottom center",     scrub: true,  },   } );
+  }, []);
+
+
   return (
-  <section className='h-[100vh] flex p-[70px] justify-between items-center gap-[100px]' id='about'>
+    <section
+      ref={sectionRef}
+      className="h-[100vh] flex p-[70px] pt-[160px] justify-between items-center gap-[100px]"
+      id="about"
+    >
 <div className='about-img'>
-    <img className='w--[100%] shadow-[0_0_25px_rgba(125,211,252,0.5)] max-w-[400px] h-auto rounded-4xl rotate-3' src={abhishek} alt="Abhishek" />
+   <img  ref={imageRef}  className="-[100%] opacity-[0.9] max-w-[400px] h-auto rounded-4xl rotate-3 " src={abhishek}  alt="Abhishek" />
 </div>
 <div className='about-content'>
    < h4 className='text-[28px] font-normal  font-semibold mb-2'>Hello, I'm Abhishek.</h4>

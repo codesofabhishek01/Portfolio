@@ -13,7 +13,7 @@ function Header({ theme, setTheme }) {
 
   return (
 <header
-  className={`main-header flex justify-between z-[9999] items-center py-[25px] fixed top-0 left-1/2 -translate-x-1/2 px-[30px] w-full max-w-[800px] mx-auto backdrop-blur-md rounded-[60px] mt-[20px] ${
+  className={`main-header flex justify-between z-[9999] items-center py-[25px] fixed top-0 left-1/2 -translate-x-1/2 px-[30px] w-full max-w-[850px] mx-auto backdrop-blur-md rounded-[60px] mt-[20px] ${
     theme === "dark" ? "bg-[#ffffff46]" : "bg-[#0000001f]"
   }`}
 >
@@ -21,10 +21,11 @@ function Header({ theme, setTheme }) {
 
     
 <ul className="menu flex gap-8">
-  <li><Link to="/">Home</Link></li>
-  <li><Link to="#about">About me</Link></li>
-  <li><Link to="#work">Work</Link></li>
-  <li><Link to="#contact">Let's Connect</Link></li>
+ 
+  <li><Link to="#about">About</Link></li>
+  <li><Link to="#work">Portfolio</Link></li>
+   <li><Link to="#blog">Blog</Link></li>
+  <li><Link to="#contact">Contact</Link></li>
 </ul>
      <button
       onClick={toggleTheme}

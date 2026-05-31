@@ -4,6 +4,17 @@
 
 body {margin: 0; padding: 0;transition: all 0.4s ease; font-family: 'ClashDisplay', sans-serif; overflow-x: hidden;}
 body.dark {background: #020817;color: white;}
-body.light {background: #F5F7FA; color: black;}
+body.light {background: #F9F6EE; color: black;}
 .word-spacing{word-spacing: -6px;}
 *{box-sizing: border-box;}
+.about-img img{
+  transition: box-shadow 0.4s ease;
+}
+
+body.dark .about-img img{
+  box-shadow: 0 0 25px rgba(125, 211, 252, 0.5);
+}
+
+body.light .about-img img{
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
+}
