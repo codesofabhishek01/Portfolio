@@ -13,7 +13,7 @@ function About() {
 
   useEffect(() => {
     gsap.fromTo(
-      imageRef.current, { scale: 0.1, }, { scale: 1.5, ease: "none", scrollTrigger: { trigger: sectionRef.current, start: "top bottom",       end: "bottom center",     scrub: true,  },   } );
+      imageRef.current, { scale: 0.5, }, { scale: 1.1, ease: "none", scrollTrigger: { trigger: sectionRef.current, start: "top bottom",       end: "bottom center",     scrub: true,  },   } );
   }, []);
 
 

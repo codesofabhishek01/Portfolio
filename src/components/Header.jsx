@@ -22,7 +22,7 @@ function Header({ theme, setTheme }) {
     
 <ul className="menu flex gap-8">
  
-  <li><Link to="#about">About</Link></li>
+ <li><a href="#about">About</a></li>
   <li><Link to="#work">Portfolio</Link></li>
    <li><Link to="#blog">Blog</Link></li>
   <li><Link to="#contact">Contact</Link></li>

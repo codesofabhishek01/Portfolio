@@ -18,3 +18,15 @@ body.dark .about-img img{
 body.light .about-img img{
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5) !important;
 }
+
+.portfolio-container .mini-card{
+     background-size: cover;
+    background-repeat: no-repeat;
+     background-position: top center;
+      transition: 10s ease ;
+}
+
+.portfolio-container .mini-card:hover{
+  transition: 15s ease ;
+  background-position: bottom center;
+}
