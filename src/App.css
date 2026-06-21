@@ -23,10 +23,10 @@ body.light .about-img img{
      background-size: cover;
     background-repeat: no-repeat;
      background-position: top center;
-      transition: 10s ease ;
+      transition: 10s ease-in ;
 }
 
 .portfolio-container .mini-card:hover{
-  transition: 15s ease ;
+  transition: 10s ease-in; ;
   background-position: bottom center;
 }

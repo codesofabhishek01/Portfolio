@@ -7,7 +7,7 @@ import Portfolio from '../components/Portfolio.jsx'
 function Home({ theme, setTheme }) {
   
   return (
-    <div className='w-full '>
+    <div className='w-full max-w-[1440px] mx-auto '>
      <Header theme={theme} setTheme={setTheme} />
   <HeroBanner />
   <About />
